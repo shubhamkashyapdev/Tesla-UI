@@ -1,22 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
-// Assets //
-import TeslaBg from './assets/images/ModelX.jpeg';
-
+// assets //
+import cars from './components/CarListData';
 // Components //
-import CarItem from './components/CarItem/Index';
+import Header from './components/Header/index';
+import CarList from './components/CarList/index';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <CarItem
-        tagline='Order Online For'
-        taglineCta='Touchless Delivery'
-        model='Model X'
-        bgImg={TeslaBg}
-      />
+      <Header />
+      <CarList />
     </View>
   );
 }
